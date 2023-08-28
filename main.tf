@@ -31,5 +31,5 @@ resource "helm_release" "pgadmin4" {
   repository    = var.helm_repository
   recreate_pods = true
 
-  values = [yamlencode(local.pgadmin)]
+  values = [yamlencode(local.pgadmin4)]
 }
