@@ -8,6 +8,13 @@ variable "chart_version" {
   default = "1.15.5"
 }
 
+variable "chart_name" {
+  type    = string
+  default = "pgadmin4"
+
+}
+
+
 variable "app_version" {
   type    = string
   default = ""
