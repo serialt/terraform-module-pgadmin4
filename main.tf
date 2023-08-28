@@ -27,7 +27,7 @@ resource "helm_release" "pgadmin4" {
   name          = var.name
   namespace     = var.namespace
   chart         = var.chart_name
-  version       = var.version
+  version       = var.chart_version
   repository    = var.helm_repository
   recreate_pods = true
 
