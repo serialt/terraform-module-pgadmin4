@@ -4,19 +4,17 @@ locals {
     tolerations      = var.tolerations
     nodeSelector     = var.nodeSelector
     env = {
-      email    = var.web-auth.email
-      password = var.web-auth.password
+      email    = var.web_auth.email
+      password = var.web_auth.password
     }
-    persistentVolume = {
-      enabled = false
-    }
+    persistentVolume = var.persistentVolume
     serverDefinitions = {
       enabled = true
       servers = var.servers_config
     }
   }
   VolumePermissions = {
-    enabled = true
+    enabled = false
   }
   resources = var.resources
 

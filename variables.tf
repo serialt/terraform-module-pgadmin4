@@ -5,7 +5,7 @@ variable "helm_repository" {
 
 variable "chart_version" {
   type    = string
-  default = "1.15.5"
+  default = "1.24.0"
 }
 
 variable "chart_name" {
@@ -38,7 +38,7 @@ variable "resources" {
 }
 
 
-variable "web-auth" {
+variable "web_auth" {
   type = any
   default = {
     email    = ""
@@ -64,4 +64,11 @@ variable "tolerations" {
   type    = list(any)
   default = []
 
+}
+
+variable "persistentVolume" {
+  type = any
+  default = {
+    default = false
+  }
 }
