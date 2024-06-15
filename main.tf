@@ -3,6 +3,12 @@ locals {
     fullnameOverride = "pgadmin4"
     tolerations      = var.tolerations
     nodeSelector     = var.nodeSelector
+    image = {
+      registry   = var.image_registry
+      repository = var.image_repository
+      tag        = var.image_tag
+
+    }
     env = {
       email    = var.web_auth.email
       password = var.web_auth.password

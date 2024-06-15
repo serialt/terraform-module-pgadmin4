@@ -14,7 +14,21 @@ variable "chart_name" {
 
 }
 
+variable "image_registry" {
+  type    = string
+  default = "docker.io"
+}
 
+variable "image_repository" {
+  type    = string
+  default = "dpage/pgadmin4"
+
+}
+variable "image_tag" {
+  type    = string
+  default = ""
+
+}
 variable "app_version" {
   type    = string
   default = ""
